@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PlantDoc | AI Plant Health Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<section class="card">
+    <h2>PlantDoc Combined Intelligence</h2>
+
+    <p>
+        Generate a combined report using plant image analysis
+        and environmental risk assessment.
+    </p>
+
+    <button type="button" id="combinedReportButton">
+        Generate Combined Report
+    </button>
+
+    <div id="combinedReportResult"></div>
+</section>
+<body>
+
+<header>
+    <div class="logo">🌱 PlantDoc</div>
+    <div class="nav-text">AI Plant Health Assistant</div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <span class="tag">SMART AGRICULTURE INTELLIGENCE</span>
+
+        <h1>Your Plant's Health,<br>
+            <span>Understood by AI.</span>
+        </h1>
+
+        <p>
+            Detect plant diseases, monitor environmental conditions
+            and make smarter crop health decisions.
+        </p>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <div class="icon">🔬</div>
+
+            <h2>AI Plant Doctor</h2>
+
+            <p>
+                Upload a photograph of your plant leaf to begin
+                disease analysis.
+            </p>
+
+            <form id="uploadForm">
+
+                <input
+                    type="file"
+                    id="plantImage"
+                    accept="image/png,image/jpeg,image/webp"
+                    required
+                >
+
+                <button type="submit">Analyze Plant Image</button>
+
+            </form>
+
+            <div id="uploadResult"></div>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🌦️</div>
+
+            <h2>AI Crop Guardian</h2>
+
+            <p>
+                Assess environmental conditions affecting your crops.
+            </p>
+
+            
+<label>Farm Location / City</label>
+<input
+    type="text"
+    id="city"
+    placeholder="Example: Kolkata"
+>
+
+<button type="button" id="weatherButton">
+    Get Live Weather
+</button>
+
+<p id="weatherResult"></p>
+
+            <label>Crop Type</label>
+
+            <select id="crop">
+                <option value="tomato">Tomato</option>
+                <option value="potato">Potato</option>
+                <option value="rice">Rice</option>
+                <option value="maize">Maize</option>
+                <option value="wheat">Wheat</option>
+            </select>
+
+            <label>Temperature (°C)</label>
+            <input type="number" id="temperature" placeholder="Example: 30">
+
+            <label>Humidity (%)</label>
+            <input type="number" id="humidity" placeholder="Example: 75">
+
+            <label>Rainfall (mm)</label>
+            <input type="number" id="rainfall" placeholder="Example: 20">
+
+            <button id="assessButton">Assess Crop Health</button>
+
+            <div id="riskResult"></div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    PlantDoc © 2026 | Detect. Predict. Protect.
+</footer>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

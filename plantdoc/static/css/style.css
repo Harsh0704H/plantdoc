@@ -1,0 +1,146 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f7f2;
+    color: #203b2b;
+}
+
+header {
+    background: #173e2b;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-text {
+    color: #c5e4cb;
+}
+
+main {
+    width: 85%;
+    max-width: 1150px;
+    margin: 65px auto;
+}
+
+.hero {
+    margin-bottom: 45px;
+}
+
+.tag {
+    color: #39844d;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #38834b;
+}
+
+.hero p {
+    color: #718075;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #718075;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0 18px;
+    border: 1px solid #d7e2d8;
+    border-radius: 7px;
+    background: white;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #287443;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #195b32;
+}
+
+#uploadResult, #riskResult {
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #718075;
+}
+
+@media(max-width: 750px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    main {
+        width: 90%;
+    }
+}
